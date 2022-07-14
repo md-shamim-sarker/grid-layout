@@ -1,0 +1,93 @@
+/* Parent */
+
+.flexible-container {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.heading {
+    width: 200px;
+    height: auto;
+    border: 1px solid gray;
+    color: white;
+    background-color: gray;
+    text-align: center;
+}
+
+.common {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+    text-align: center;
+    color: white;
+}
+
+.common div:nth-child(odd) {
+    background-color: blue;
+}
+
+.common div:nth-child(even) {
+    background-color: red;
+}
+
+.display {
+    display: grid;
+}
+
+.grid-template {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-rows: 20% auto 20%;
+}
+
+.grid-gap {
+    display: grid;
+    grid-template: 1fr 1fr 1fr / 1fr 3fr 1fr;
+    gap: 10px 5px;
+}
+
+.justify-items {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    justify-items: start;
+}
+
+.align-items {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    align-items: start;
+}
+
+.justify-content {
+    display: grid;
+    grid-template: repeat(3, 30px) / repeat(3, 30px);
+    justify-content: center;
+}
+
+.align-content {
+    display: grid;
+    grid-template: repeat(3, 30px) / repeat(3, 30px);
+    align-content: center;
+}
+
+.grid-auto-flow {
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-auto-flow: column;
+}
+
+/* Children */
+
+.grid-column {
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    gap: 5px;
+}
+
+.grid-column-special {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
